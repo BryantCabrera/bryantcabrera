@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700'); */
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora|Montserrat:500,700");
 
 :root {
     /* Primary Colors */
@@ -24,16 +25,33 @@
 }
 
 html {
-    background: var(--color-white);
-    font-family: 'Roboto', sans-serif;
+    background: var(--color-black);
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Lora', serif;
     font-size: 62.5%;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 body {
     font-size: 1.6rem;
 }
+
 /**********REUSEABLE CONTENT**********/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.sub-header {
+    font-family: 'Montserrat', serif;
+}
+
+.btn {
+    font-family: 'Montserrat',sans-serif;
+}
+
+.error {
+    font-family: 'Montserrat', sans-serif;
+}
 
 /**********HEADER**********/
 header {
@@ -45,6 +63,7 @@ header {
     width: 100vw;
     background: transparent;
     /* background: linear-gradient(to bottom, var(--color-primary-main), var(--color-primary-dark)); */
+    font-family: 'Lora', serif;
     z-index: 2;
 }
 
@@ -79,7 +98,7 @@ nav ul li {
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-white) 50%);
     background-size: 250%;
     color: var(--color-white);
-    -webkit-text-stroke: 1px var(--color-black);
+    /* -webkit-text-stroke: 1px var(--color-black); */
     transition: all .4s;
 }
 
@@ -88,7 +107,7 @@ nav ul li {
     /* background: var(--color-secondary-main);  */
     background-position: 100%;
     color: var(--color-primary-main);
-    -webkit-text-stroke: 1px var(--color-black);
+    /* -webkit-text-stroke: 1px var(--color-black); */
 }
 
 .navbar__list--link::before {
@@ -110,7 +129,7 @@ main {
     padding-top: 4rem;
     height: 50vh;
     width: 100vw;
-    background-image: url('../resources/imgs/bg.jpg')
+    background-image: linear-gradient(rgba(59, 59, 59, .5), rgba(59, 59, 59, .5)), url('../resources/imgs/bg.jpg');
 }
 
 .skills__list {
