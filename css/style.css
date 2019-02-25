@@ -39,6 +39,9 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
     font-size: 1.6rem;
 }
 
@@ -53,6 +56,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
     font-family: 'Montserrat',sans-serif;
+}
+
+.icon {
+    height: 2rem;
+    width: auto;
 }
 
 .error {
@@ -138,20 +146,75 @@ main {
     place-items: center;
     padding-top: 4rem;
     height: 50vh;
-    width: 100%;
+    width: 60%;
+    text-align: left;
     /* background-image: linear-gradient(rgba(59, 59, 59, .5), rgba(59, 59, 59, .5)), url('../resources/imgs/bg.jpg'); */
 }
 
 .about__name {
-    font-size: 2.6rem;
+    width: 100%;
+    font-size: 4rem;
 }
 
 .about__summary {
+    width: 100%;
     font-size: 1.2rem;
 }
 
 .about__contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "linked-in-icon email-icon github-icon"
+                        "linked-in-text email-text github-text";
+    margin-top: .5rem;
     font-size: 1.4rem;
+}
+
+.about__contact__linkedin--icon {
+    grid-area: linked-in-icon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__contact__linkedin--text {
+    grid-area: linked-in-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.about__contact__email--icon {
+    grid-area: email-icon;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.about__contact__email--text {
+    grid-area: email-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.about__contact__github--icon {
+    grid-area: github-icon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__contact__github--text {
+    grid-area: github-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
 }
 
 .skills__list {
