@@ -3,8 +3,10 @@
 
 :root {
     /* Primary Colors */
-    --color-primary-main: rgba(165, 0, 12, 1);
+    --color-primary-main: #232323; /*rgba(165, 0, 12, 1);*/
     --color-primary-dark: rgba(72, 0, 1, 1);
+
+    --color-bg: #f7f6ee;
  
     /* Secondary Colors */
     --color-secondary-light: rgba(210, 255, 204, 1);
@@ -24,12 +26,16 @@
     margin: 0;
 }
 
+html, body {
+    background-color: var(--color-bg);
+    color: var(--color-primary-main);
+}
+
 html {
-    background: var(--color-black);
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Lora', serif;
-    font-size: 62.5%;
-    color: var(--color-white);
+    font-size: 1.5vw;
+    width: 100vw;
 }
 
 body {
@@ -60,11 +66,15 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 4rem;
-    width: 100vw;
-    background: transparent;
+    width: 100%;
+    background: var(--color-bg);
     /* background: linear-gradient(to bottom, var(--color-primary-main), var(--color-primary-dark)); */
     font-family: 'Lora', serif;
     z-index: 2;
+}
+
+.logo {
+    height: 3.75rem;
 }
 
 /* NAVIGATION */
@@ -95,9 +105,9 @@ nav ul li {
 
 .navbar__list--link:link,
 .navbar__list--link:visited {
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-white) 50%);
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-primary-main) 50%);
     background-size: 250%;
-    color: var(--color-white);
+    color: var(--color-primary-main);
     /* -webkit-text-stroke: 1px var(--color-black); */
     transition: all .4s;
 }
@@ -106,7 +116,7 @@ nav ul li {
 .navbar__list--link:active {
     /* background: var(--color-secondary-main);  */
     background-position: 100%;
-    color: var(--color-primary-main);
+    color: var(--color-bg);
     /* -webkit-text-stroke: 1px var(--color-black); */
 }
 
@@ -128,8 +138,20 @@ main {
     place-items: center;
     padding-top: 4rem;
     height: 50vh;
-    width: 100vw;
-    background-image: linear-gradient(rgba(59, 59, 59, .5), rgba(59, 59, 59, .5)), url('../resources/imgs/bg.jpg');
+    width: 100%;
+    /* background-image: linear-gradient(rgba(59, 59, 59, .5), rgba(59, 59, 59, .5)), url('../resources/imgs/bg.jpg'); */
+}
+
+.about__name {
+    font-size: 2.6rem;
+}
+
+.about__summary {
+    font-size: 1.2rem;
+}
+
+.about__contact {
+    font-size: 1.4rem;
 }
 
 .skills__list {
