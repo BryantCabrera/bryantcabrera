@@ -245,14 +245,44 @@ main {
 
 /**********SKILLS**********/
 .skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     width: 100%;
     margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.skill {
+    flex-basis: 14%;
+    display: grid;
+    grid-template-columns: 5rem;
+    grid-template-rows: 5rem 1.5rem;
+    grid-template-areas: "img"
+                         "text";
+}
+
+.skill__img {
+    grid-area: img;
+    display: flex;
+    place-items: center;
+    height: 5rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.skill__text {
+    grid-area: text;
+    justify-self: center;
+    align-self: center;
+    font-size: 1rem;
 }
 
 .skills__list {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     place-items: center;
+    margin-top: 1rem;
     font-size: 1rem;
 }
 
@@ -265,7 +295,8 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    place-items: center
+    place-items: center;
+    margin-bottom: 2rem;
 }
 
 .projects h2 {
