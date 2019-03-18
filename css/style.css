@@ -20,7 +20,7 @@
     --color-white: rgba(252, 252, 252, 1);
 
     /* Border Radius */
-    --border-radius-main: 3rem;
+    --border-radius-main: .3rem;
 }
 
 * {
@@ -48,7 +48,9 @@ body {
     font-size: 1.6rem;
 }
 
-/**********REUSEABLE CONTENT**********/
+/****************************************/
+/********** REUSEABLE CONTENT **********/
+/****************************************/
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Libre Baskerville', serif;
 }
@@ -57,6 +59,11 @@ a {
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 700;
+}
+
+a:link,
+a:visited {
+    color: var(--color-primary-main);
 }
 
 .sub-header {
@@ -76,7 +83,9 @@ a {
     font-family: 'Montserrat', sans-serif;
 }
 
-/**********HEADER**********/
+/****************************************/
+/********** HEADER **********/
+/****************************************/
 header {
     position: fixed;
     display: flex; /* flex children: image logo, nav */
@@ -130,10 +139,8 @@ nav ul li {
 
 .navbar__list--link:hover,
 .navbar__list--link:active {
-    /* background: var(--color-secondary-main);  */
     background-position: 100%;
     color: var(--color-bg);
-    /* -webkit-text-stroke: 1px var(--color-black); */
 }
 
 .navbar__list--link::before {
@@ -146,7 +153,9 @@ nav ul li {
     background: var(--color-secondary-light); 
 }
 
-/**********MAIN**********/
+/****************************************/
+/********** MAIN **********/
+/****************************************/
 main {
     position: relative;
     display: flex;
@@ -195,6 +204,10 @@ main {
     font-size: 1rem;
 }
 
+/* .about__contact__linkedin--text a {
+    font-size: 1rem;
+} */
+
 .about__contact__email--icon {
     grid-area: email-icon;
     display: flex;
@@ -225,6 +238,51 @@ main {
     font-size: 1rem;
 }
 
+/* .about__contact__github--text a {
+    font-size: 1rem;
+} */
+
+/* ~~~~~ */
+.about__contact__linkedin--text a,
+.about__contact__github--text a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.about__contact__linkedin--text a:link,
+.about__contact__linkedin--text a:visited,
+.about__contact__github--text a:link,
+.about__contact__github--text a:visited {
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-primary-main) 50%);
+    background-size: 250%;
+    color: var(--color-primary-main);
+    transition: all .4s;
+}
+
+.about__contact__linkedin--text a:hover,
+.about__contact__linkedin--text a:active,
+.about__contact__github--text a:hover,
+.about__contact__github--text a:active, {
+    /* background: var(--color-secondary-main);  */
+    background-position: 100%;
+    color: var(--color-bg);
+    /* -webkit-text-stroke: 1px var(--color-black); */
+}
+
+.about__contact__linkedin--text a::before,
+.about__contact__github--text a::before, {
+    position: absolute;
+    content: "     ";
+    transition: all .2s;
+}
+
+.about__contact__linkedin--text a::before:hover,
+.about__contact__github--text a::before:hover {
+    background: var(--color-secondary-light); 
+}
+
 /* Background Video */
 /* .bg-video {
     position: absolute;
@@ -243,7 +301,9 @@ main {
     object-fit: cover;
 } */
 
-/**********SKILLS**********/
+/****************************************/
+/********** SKILLS **********/
+/****************************************/
 .skills {
     display: flex;
     flex-flow: row wrap;
@@ -290,12 +350,15 @@ main {
     text-align: center;
 }
 
-/**********PROJECTS**********/
+/****************************************/
+/********** PROJECTS **********/
+/****************************************/
 .projects {
     width: 100%;
     display: flex;
     flex-direction: column;
     place-items: center;
+    padding-top: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -304,7 +367,7 @@ main {
 }
 
 .project__card {
-    width: 80%;
+    width: 90%;
     display: grid;
     grid-template-columns: 60% 22.5% 5% 12.5%;
     grid-template-rows: 2.2rem 18.5rem 2.7rem;
@@ -408,6 +471,170 @@ main {
     background: var(--color-secondary-light); 
 }
 
-/**********RESUME**********/
+/****************************************/
+/********** RESUME **********/
+/****************************************/
+#resume {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
 
-/**********FOOTER**********/
+#resume h2 {
+    margin-bottom: 1rem;
+}
+
+.resume {
+    width: 90%;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 2.6rem 10rem 3.5rem 85rem 14rem 5rem 12.5rem;
+    grid-template-areas: "about about"
+                         "profile--title profile"
+                         "education--title education"
+                         "experience--title experience"
+                         "extracurriculars--title extracurriculars"
+                         "publications--title publications"
+                         "soft-skills--title soft-skills";
+    border: .1rem solid var(--color-primary-main);
+    border-radius: var(--border-radius-main);
+    overflow: hidden;
+}
+
+.resume__title {
+    text-align: right;
+    font-size: 1rem;
+    padding-right: .2rem;
+    background-color: rgba(35, 35, 35, .6);
+    color: var(--color-bg);
+    font-weight: 700;
+    /* transform: rotate(270deg); */
+}
+
+.resume__content {
+    font-size: 1.2rem;
+    padding-left: .3rem;
+}
+
+.resume__date {
+    text-align: right;
+}
+
+.resume__about {
+    grid-area: about;
+    text-align: center;
+    width: 100%;
+    background-color: var(--color-primary-main);
+    font-size: 2rem;
+    color: var(--color-bg);
+}
+
+.resume__profile {
+    grid-area: profile;
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__profile--title {
+    grid-area: profile--title;
+    border-right: .1rem solid var(--color-primary-main);
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__education {
+    grid-area: education;
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__education--title {
+    grid-area: education--title;
+    border-right: .1rem solid var(--color-primary-main);
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__experience {
+    grid-area: experience;
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__experience--title {
+    grid-area: experience--title;
+    border-right: .1rem solid var(--color-primary-main);
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__extracurriculars {
+    grid-area: extracurriculars;
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__extracurriculars--title {
+    grid-area: extracurriculars--title;
+    border-right: .1rem solid var(--color-primary-main);
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__publications {
+    grid-area: publications;
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__publications--title {
+    grid-area: publications--title;
+    border-right: .1rem solid var(--color-primary-main);
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__soft-skills {
+    grid-area: soft-skills;
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__soft-skills--title {
+    grid-area: soft-skills--title;
+    border-right: .1rem solid var(--color-primary-main);
+    border-bottom: .1rem solid var(--color-primary-main);
+}
+
+.resume__content--item {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.resume__content--item__header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "title date";
+    padding-right: .2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.resume__content--item__title {
+    grid-area: title;
+}
+
+.resume__content--item__date {
+    grid-area: date;
+    text-align: right;
+    /* padding-right: .2rem; */
+}
+
+.resume__content--item__position {
+    font-size: 1rem;
+}
+
+.resume__content--item__description {
+    font-style: italic;
+}
+
+.resume__content--item__list {
+    padding-left: 1.5rem;
+}
+
+/****************************************/
+/********** FOOTER **********/
+/****************************************/
