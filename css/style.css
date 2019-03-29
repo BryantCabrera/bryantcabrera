@@ -93,7 +93,7 @@ header {
     align-items: center;
     height: 4rem;
     width: 100%;
-    background: var(--color-bg);
+    background: transparent;
     /* background: linear-gradient(to bottom, var(--color-primary-main), var(--color-primary-dark)); */
     font-family: 'Lora', serif;
     z-index: 2;
@@ -119,7 +119,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 1.5rem;
+    padding: .75rem;
 }
 
 .navbar__list--link {
