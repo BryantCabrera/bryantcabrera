@@ -162,10 +162,15 @@ main {
     flex-direction: column;
     place-items: center;
     padding-top: 4rem;
-    height: 50vh;
-    width: 60%;
+    height: 100vh;
+    width: 100%;
     text-align: left;
     /* background-image: linear-gradient(rgba(59, 59, 59, .5), rgba(59, 59, 59, .5)), url('../resources/imgs/bg.jpg'); */
+}
+
+.about__content {
+    width: 60%;
+    text-align: left;
 }
 
 .about__name {
