@@ -314,6 +314,10 @@ main {
 /****************************************/
 /********** SKILLS **********/
 /****************************************/
+.skills__title {
+    padding-top: 4rem;
+}
+
 .skills {
     display: flex;
     flex-flow: row wrap;
@@ -500,7 +504,7 @@ main {
     align-self: center;
     display: grid;
     grid-template-columns: 15% 1fr;
-    grid-template-rows: 2.6rem 10rem 10rem 79rem 12.5rem 4rem 12.5rem;
+    grid-template-rows: 2.6rem 10rem 10rem 82rem 12.5rem 4rem 12.5rem;
     grid-template-areas: "about about"
                          "profile--title profile"
                          "education--title education"
