@@ -165,11 +165,16 @@ main {
     height: 100vh;
     width: 100%;
     text-align: left;
+    background-image: url('../resources/imgs/main__bg.png');
+    background-size: cover;
     /* background-image: linear-gradient(rgba(59, 59, 59, .5), rgba(59, 59, 59, .5)), url('../resources/imgs/bg.jpg'); */
 }
 
 .about__content {
-    width: 60%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 40%;
     text-align: left;
 }
 
