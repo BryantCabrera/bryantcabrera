@@ -396,8 +396,8 @@ main {
     font-size: 2rem;
     color: var(--color-bg);
     text-align: center;
-    border-top-left-radius: var(--border-radius-main);
-    border-top-right-radius: var(--border-radius-main);
+    /* border-top-left-radius: var(--border-radius-main);
+    border-top-right-radius: var(--border-radius-main); */
 }
 
 .project__img--link {
@@ -500,7 +500,7 @@ main {
     align-self: center;
     display: grid;
     grid-template-columns: 15% 1fr;
-    grid-template-rows: 2.6rem 10rem 10rem 85rem 14rem 5rem 12.5rem;
+    grid-template-rows: 2.6rem 10rem 10rem 79rem 12.5rem 4rem 12.5rem;
     grid-template-areas: "about about"
                          "profile--title profile"
                          "education--title education"
@@ -511,6 +511,10 @@ main {
     border: .1rem solid var(--color-primary-main);
     border-radius: var(--border-radius-main);
     overflow: hidden;
+}
+
+.resume__link {
+    font-size: 1rem;
 }
 
 .resume__title {
