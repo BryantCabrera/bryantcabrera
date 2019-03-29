@@ -500,7 +500,7 @@ main {
     align-self: center;
     display: grid;
     grid-template-columns: 15% 1fr;
-    grid-template-rows: 2.6rem 10rem 3.5rem 85rem 14rem 5rem 12.5rem;
+    grid-template-rows: 2.6rem 10rem 10rem 85rem 14rem 5rem 12.5rem;
     grid-template-areas: "about about"
                          "profile--title profile"
                          "education--title education"
