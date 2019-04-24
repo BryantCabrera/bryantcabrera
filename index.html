@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Bryant Cabrera's Portfolio Page</title>
 </head>
 <body>
     <header>
         <img src="./resources/imgs/bryantcabrera_logo.svg" alt="Bryant Cabrera's Logo" title="Bryant Cabrera's Logo" class="logo">
-        <nav>
+        <nav id="nav--linear">
             <ul>
-                <li><a class="navbar__list--link" href="#about">About</a></li>
-                <li><a class="navbar__list--link" href="#skills">Skills</a></li>
-                <li><a class="navbar__list--link"  href="#projects">Projects</a></li>
-                <li><a class="navbar__list--link"  href="#resume">Resume</a></li>
-                <li><a class="navbar__list--link"  href="#contact">Contact</a></li>
+                <li><a class="navbar__list--link about-link" href="#about">About</a></li>
+                <li><a class="navbar__list--link skills-link" href="#skills">Skills</a></li>
+                <li><a class="navbar__list--link projects-link"  href="#projects">Projects</a></li>
+                <li><a class="navbar__list--link resume-link"  href="#resume">Resume</a></li>
+                <li><a class="navbar__list--link contact-link"  href="#contact">Contact</a></li>
             </ul>
+        </nav>
+
+        <nav id="nav--hamburger" class="navbar__nav--hamburger hidden">
+            <input type="checkbox" class="hamburger__checkbox" id="hamburger-toggle"></input>
+
+            <label for="hamburger-toggle" class="hamburger__button">
+                <span class="hamburger__icon">&nbsp;</span>
+            </label>
+
+            <div class="hamburger__background">&nbsp;</div>
+            
+            <div class="hamburger__nav">
+                <ul class="hamburger__list">
+                    <li class="hamburger__item">
+                        <a class="hamburger__link" href="#about" title="About">About</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a class="hamburger__link" href="#skills" title="Skills">Skills</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a class="hamburger__link" href="#projects" title="Projects">Projects</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a class="hamburger__link" href="#resume" title="Resume">Resume</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a class="hamburger__link" href="#contact" title="Contact Me">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -37,7 +68,7 @@
             <div class="about__contact"> 
                 <a href="https://www.linkedin.com/in/bryantcabrera/" title="Bryant Cabrera's LinkedIn" target="_blank" class="about__contact__linkedin--icon"><img class="icon" src="./resources/imgs/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
                 <div class="about__contact__linkedin--text">
-                    <a href="https://www.linkedin.com/in/bryantcabrera/" title="Bryant Cabrera's LinkedIn" target="_blank" class="about__contact__linkedin--link">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/bryantcabrera/" title="Bryant Cabrera's LinkedIn" target="_blank" class="about__contact__linkedin--link navbar__list--link">LinkedIn</a>
                 </div>
                 <img class="icon about__contact__email--icon" src="./resources/imgs/email.png" alt="GMail" title="GMail"> 
                 <div class="about__contact__email--text">
@@ -45,7 +76,7 @@
                 </div>
                 <a href="https://github.com/BryantCabrera" title="Bryant Cabrera's GitHub" target="_blank" class="about__contact__github--icon"><img class="icon" src="./resources/imgs/github.png" alt="GitHub" title="GitHub"></a>
                 <div class="about__contact__github--text">
-                    <a href="https://github.com/BryantCabrera" title="Bryant Cabrera's GitHub" target="_blank" class="about__contact__github--link">GitHub</a>
+                    <a href="https://github.com/BryantCabrera" title="Bryant Cabrera's GitHub" target="_blank" class="about__contact__github--link navbar__list--link">GitHub</a>
                 </div>
             </div>
         </div>
@@ -391,7 +422,7 @@
         <div class="about__contact"> 
             <a href="https://www.linkedin.com/in/bryantcabrera/" title="Bryant Cabrera's LinkedIn" target="_blank" class="about__contact__linkedin--icon"><img class="icon" src="./resources/imgs/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
             <div class="about__contact__linkedin--text">
-                <a href="https://www.linkedin.com/in/bryantcabrera/" title="Bryant Cabrera's LinkedIn" target="_blank" class="about__contact__linkedin--icon">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/bryantcabrera/" title="Bryant Cabrera's LinkedIn" target="_blank" class="about__contact__linkedin--icon navbar__list--link">LinkedIn</a>
             </div>
             <img class="icon about__contact__email--icon" src="./resources/imgs/email.png" alt="GMail" title="GMail"> 
             <div class="about__contact__email--text">
@@ -399,7 +430,7 @@
             </div>
             <a href="https://github.com/BryantCabrera" title="Bryant Cabrera's GitHub" target="_blank" class="about__contact__github--icon"><img class="icon" src="./resources/imgs/github.png" alt="GitHub" title="GitHub"></a>
             <div class="about__contact__github--text">
-                <a href="https://github.com/BryantCabrera" title="Bryant Cabrera's GitHub" target="_blank" class="about__contact__github--icon">GitHub</a>
+                <a href="https://github.com/BryantCabrera" title="Bryant Cabrera's GitHub" target="_blank" class="about__contact__github--icon navbar__list--link">GitHub</a>
             </div>
         </div>
     <script src="js/app.js"></script>
