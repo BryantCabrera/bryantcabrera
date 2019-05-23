@@ -804,3 +804,45 @@ main {
 /****************************************/
 /********** FOOTER **********/
 /****************************************/
+
+
+/****************************************/
+/********** MEDIA QUERIES **********/
+/****************************************/
+@media (max-width: 575.98px) { 
+    
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    main {
+        background-size: 100% auto;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    main {
+        background-size: auto 100%;
+    }
+
+    .about__name {
+        font-size: 60px;
+    }
+
+    .about__summary {
+        font-size: 24px;
+    }
+
+    .about__contact,
+    .about__contact__linkedin--text,
+    .about__contact__email--text,
+    .about__contact__github--text {
+        font-size: 16px;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    
+}
