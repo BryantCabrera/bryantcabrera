@@ -810,13 +810,59 @@ main {
 /********** MEDIA QUERIES **********/
 /****************************************/
 @media (max-width: 575.98px) { 
-    
+    h2 {
+        font-size: 24px;
+    }
+
+    main {
+        background-position: -750px;
+    }
+
+    .about__content {
+        width: 90%;
+        text-align: center;
+    }
+
+    .about__name {
+        font-size: 40px;
+    }
+
+    .about__summary {
+        font-size: 16px;
+    }
+
+    .about__contact {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 200px;
+    }
+
+    .icon {
+        height: 40px;
+    }
+
+    .about__contact,
+    .about__contact__linkedin--text a,
+    .about__contact__email--text,
+    .about__contact__github--text a {
+        font-size: 24px;
+    }
+
+    .skill__text {
+        font-size: 8px;
+    }
+
+    .skills__list {
+        font-size: 12px;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
     main {
-        background-size: 100% auto;
+        background-position: -250px;
     }
 }
 
@@ -835,9 +881,9 @@ main {
     }
 
     .about__contact,
-    .about__contact__linkedin--text,
+    .about__contact__linkedin--text a,
     .about__contact__email--text,
-    .about__contact__github--text {
+    .about__contact__github--text a {
         font-size: 16px;
     }
 }
