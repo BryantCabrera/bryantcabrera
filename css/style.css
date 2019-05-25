@@ -134,7 +134,9 @@ nav ul li {
 }
 
 .navbar__list--link:link,
-.navbar__list--link:visited {
+.navbar__list--link:visited,
+.resume--versions__link:link,
+.resume--versions__link:visited {
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-primary-main) 50%);
     background-size: 250%;
     color: var(--color-primary-main);
@@ -142,7 +144,9 @@ nav ul li {
 }
 
 .navbar__list--link:hover,
-.navbar__list--link:active {
+.navbar__list--link:active,
+.resume--versions__link:hover,
+.resume--versions__link:active {
     background-position: 100%;
     color: var(--color-bg);
 }
@@ -641,10 +645,24 @@ main {
     display: flex;
     flex-direction: column;
     place-items: center;
+    width: 90%;
 }
 
 #resume h2 {
     margin-bottom: 1rem;
+}
+
+.resume--versions__link {
+    margin: 1rem;
+}
+
+.resume--pdf {
+    height: 1150px;
+    width: 80%;
+}
+
+#resume--digital {
+    display: none;
 }
 
 .resume {

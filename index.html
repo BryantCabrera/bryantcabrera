@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>Bryant Cabrera's Portfolio Page</title>
+    <title>Bryant Cabrera Full Stack Software Engineer Portfolio Page</title>
 </head>
 <body>
     <header>
@@ -242,7 +242,14 @@
 
     <section id="resume">
         <h2>Resume</h2>
-        <div class="resume">
+        <div class="resume--versions">
+            <a href="#resume" alt="Resume PDF" title="Resume PDF" 
+            id="resume--versions__link--pdf" class="resume--versions__link">PDF</a>
+            <a href="#resume" alt="Resume PDF" title="Resume PDF" id="resume--versions__link--digital" class="resume--versions__link resume--versions__link--digital">Digital</a>
+        </div>
+        <iframe src="./resources/BryantCabrera_Resume.pdf" id="resume--pdf" class="resume--pdf">
+        </iframe>
+        <div id="resume--digital" class="resume">
             <div class="resume__about">
                 Bryant Cabrera
             </div>

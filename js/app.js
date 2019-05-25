@@ -11,6 +11,10 @@ const $contactLink = $('.contact-link');
 const $about = $('#about');
 const $skills = $('#skills');
 const $projects = $('#projects');
+const $resumePDFlink = $('#resume--versions__link--pdf');
+const $resumePDF = $('#resume--pdf');
+const $resumeDigitalLink = $('#resume--versions__link--digital');
+const $resumeDigital = $('#resume--digital')
 const $resume = $('#resume');
 const $contact = $('#contact');
 
@@ -37,7 +41,7 @@ $aboutLink.click(function() {
     $('html, body').animate({
         /* class I want to scroll to  */
         scrollTop: $about.offset().top 
-    }, 500); /*animation time length*/
+    }, 500); /* animation time length */
 });
 
 $skillsLink.click(function() { 
@@ -67,4 +71,8 @@ $contactLink.click(function() {
 /* Hamburger Functionality */
 $hamburgerLink.click(function() {
     $hamburgerCheckbox.prop("checked", false);
+});
+
+$resumeDigitalLink.click(function () {
+    $resumeDigital.toggle();
 });
