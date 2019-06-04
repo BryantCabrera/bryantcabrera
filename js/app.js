@@ -73,6 +73,6 @@ $hamburgerLink.click(function() {
     $hamburgerCheckbox.prop("checked", false);
 });
 
-$resumeDigitalLink.click(function () {
-    $resumeDigital.toggle();
-});
+// $resumeDigitalLink.click(function () {
+//     $resumeDigital.toggle();
+// });
